@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Place of Beauty & Healthy</title>
+    
+    <!-- Подключение шрифта Montserrat из Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Подключение Tailwind CSS через CDN (Для стабильности, хотя лучше использовать локальную сборку) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Конфигурация Tailwind должна быть здесь, чтобы включить dark mode и custom fonts
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Montserrat', 'sans-serif'] },
+            colors: { gray: { 850: '#1f2937', 900: '#111827', 950: '#030712' } }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Пользовательские стили и анимации (Neon Text) -->
+    <style>
+      /* Применяем шрифт ко всему body */
+      body { 
+        font-family: 'Montserrat', sans-serif; 
+        background-color: #f8fafc; 
+        color: #1e293b; 
+        transition: background-color 0.3s, color 0.3s; /* Плавный переход темы */
+      }
+      .dark body { 
+        background-color: #020617; 
+        color: #f1f5f9; 
+      }
+      
+      /* Стили для скроллбара */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #f1f5f9; }
+      .dark ::-webkit-scrollbar-track { background: #0f172a; }
+      ::-webkit-scrollbar-thumb { background: #9333ea; border-radius: 4px; }
+      
+      /* Анимация Neon Glow */
+      @keyframes neonGlow {
+        0%, 100% { text-shadow: 0 0 1px #fff, 0 0 5px #c084fc; }
+        50% { text-shadow: 0 0 5px #fff, 0 0 10px #c084fc, 0 0 15px #a855f7; }
+      }
+      .neon-text {
+        animation: neonGlow 3s ease-in-out infinite alternate;
+      }
+    </style>
+    <script type="module" crossorigin src="/Place_of_Beauty-Healthy/assets/index-rn9H4oZx.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    
+  </body>
+</html>
